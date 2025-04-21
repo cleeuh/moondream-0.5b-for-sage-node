@@ -23,7 +23,7 @@ def resize_image(image, target_size=640):
 
 def run(args):    
     print("loading model")
-    model = md.vl(model="./moondream-2b-int8.mf", load_on_use=args.dynamic_loading)
+    model = md.vl(model="./moondream-0.5b-int8.mf", load_on_use=args.dynamic_loading)
 
     with Plugin() as plugin, Camera(args.stream) as camera:
         while True:
@@ -76,18 +76,7 @@ def parse_args():
         default=[],
         help='Prompt the model and get a response'
     )
-    # parser.add_argument(
-    #     '--detect',
-    #     action='append',
-    #     default=[],
-    #     help='Bounding boxes for the image from a prompt'
-    # )
-    # parser.add_argument(
-    #     '--point',
-    #     action='append',
-    #     default=[],
-    #     help='Get X,Y location for the image from the prompt'
-    # )
+
     return parser.parse_args()
 
 if __name__ == '__main__':
