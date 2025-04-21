@@ -23,7 +23,7 @@ def resize_image(image, target_size=640):
 
 def run(args):    
     print("loading model")
-    model = md.vl(model="./moondream-0.5b-int8.mf", load_on_use=args.dynamic_loading)
+    model = md.vl(model="./moondream-0_5b-int8.mf", load_on_use=args.dynamic_loading)
 
     with Plugin() as plugin, Camera(args.stream) as camera:
         while True:
