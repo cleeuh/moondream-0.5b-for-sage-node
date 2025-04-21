@@ -1,1 +1,1 @@
-sudo docker buildx build --platform linux/arm64 -t tmp/waggle --load . && time sudo docker run --platform linux/arm64 tmp/waggle --caption
+sudo docker buildx build --platform linux/arm64 -t tmp/waggle_05 --load . && time sudo docker run --platform linux/arm64 tmp/waggle_05 --caption
